@@ -4,7 +4,7 @@
     border: 0;
 
     .card-header{
-      background-color: #878d99;
+      background-color: #78C2AD !important;
       border-radius: 0;
       color: white;
       font-weight: 700;
@@ -15,8 +15,8 @@
       padding: 20px;
 
       .title{
-        color: #878d99;
-        font-weight: 700;
+        color: #888;
+        font-weight: 400;
       }
 
       .btn-exchange{
@@ -49,8 +49,7 @@
       height: 50px;
     }
   }
-
-
+  
   #result {
     margin-bottom: 20px;
   }
