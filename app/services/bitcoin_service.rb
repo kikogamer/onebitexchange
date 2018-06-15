@@ -17,9 +17,9 @@ class BitcoinService
 
       if value == 0
         0
-      elsif @convertTo
+      elsif @convertTo == "true"
         @amount / value
-      else
+      else 
         @amount * value
       end
     rescue RestClient::ExceptionWithResponse => e

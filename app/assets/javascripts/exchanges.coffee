@@ -3,19 +3,44 @@ convert = () ->
     $('#result').val(0)
     return false
 
-  $.ajax '/convert',
+  source_currency = $("#source_currency").val()
+  target_currency = $("#target_currency").val()
+
+  if source_currency == 'BTC' || target_currency == 'BTC'
+    if source_currency == 'BTC'
+      currency = target_currency
+      convertTo = false
+    else
+      currency = source_currency
+      convertTo = true
+
+    $.ajax '/bitcoins/convert',
       type: 'GET'
       dataType: 'json'
       data: {
-              source_currency: $("#source_currency").val(),
-              target_currency: $("#target_currency").val(),
-              amount: $("#amount").val()
+              currency: currency,
+              amount: $("#amount").val(),
+              convertTo: convertTo
             }
       error: (jqXHR, textStatus, errorThrown) ->
         alert textStatus
       success: (data, text, jqXHR) ->
         $('#result').val(data.value)
     return false
+  else
+    $.ajax '/convert',
+        type: 'GET'
+        dataType: 'json'
+        data: {
+                source_currency: source_currency,
+                target_currency: target_currency,
+                amount: $("#amount").val()
+              }
+        error: (jqXHR, textStatus, errorThrown) ->
+          alert textStatus
+        success: (data, text, jqXHR) ->
+          $('#result').val(data.value)
+      return false
 
 $(document).ready ->
 
