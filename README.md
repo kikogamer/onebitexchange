@@ -35,7 +35,7 @@ $ docker-compose run --rm app bundle exec rails db:create
 ```
 $ docker-compose run --rm app bundle exec rails db:migrate
 ```
-After that you need install project dependecies
+You need install project dependecies
 
 ```
 $ docker-compose run --rm app bundle exec yarn add jquery
