@@ -67,7 +67,8 @@ $ docker-compose run --rm app bundle exec rspec
 * [Ruby on Rails](https://rubyonrails.org/) - The web framework used
 * [REST Client](https://github.com/rest-client/rest-client/) - The rest client used
 * [WebMock](https://github.com/bblimke/webmock/) - Library for stubbing and setting expectations on HTTP requests in Ruby
-* [Materialize](https://github.com/mkhairi/materialize-sass) - The css framework used
+* [JQuery](https://jquery.com/) - The javascript framework
+* [Bootstrap](https://getbootstrap.com/) - The css framework
 * [PostgreSQL](https://www.postgresql.org/) - SGDB
 
 ## Authors
@@ -80,6 +81,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* The bootcamp super full stack team.
